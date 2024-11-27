@@ -46,6 +46,13 @@ $(BUILD_DIR)/kernel.bin: always
 	@$(MAKE) -C source/kernel BUILD_DIR=$(abspath $(BUILD_DIR))
 
 #
+# Terminal
+#
+terminal: $(BUILD_DIR)/terminal.bin
+
+$(BUILD_DIR)/terminal.bin: always
+	@$(MAKE) -C source/terminal BUILD_DIR=$(abspath $(BUILD_DIR))
+#
 # Tools
 #
 tools_fat: $(BUILD_DIR)/tools/fat
